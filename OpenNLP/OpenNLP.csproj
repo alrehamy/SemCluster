@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8251BB2-4CEF-4586-818A-AA96E3EA3683}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenNLP</RootNamespace>
+    <AssemblyName>OpenNLP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chunker\DefaultChunkerContextGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chunker\EnglishTreebankChunker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chunker\IChunker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chunker\IChunkerContextGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chunker\MaximumEntropyChunker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chunker\SentenceChunk.cs" />
+    <Compile Include="PartsOfSpeech.cs" />
+    <Compile Include="PosTagger\DefaultPosContextGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PosTagger\EnglishMaximumEntropyPosTagger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PosTagger\IPosContextGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PosTagger\IPosTagger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PosTagger\MaximumEntropyPosTagger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PosTagger\PosLookupList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SentenceDetecter\CharactersSpecificEndOfSentenceScanner.cs" />
+    <Compile Include="SentenceDetecter\DefaultEndOfSentenceScanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SentenceDetecter\EnglishMaximumEntropySentenceDetector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SentenceDetecter\IEndOfSentenceScanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SentenceDetecter\ISentenceDectector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SentenceDetecter\MaximumEntropySentenceDetector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SentenceDetecter\SentenceDetectionContextGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TaggedWord.cs" />
+    <Compile Include="Tokenizer\AbstractTokenizer.cs" />
+    <Compile Include="Tokenizer\EnglishRuleBasedTokenizer.cs" />
+    <Compile Include="Tokenizer\EnglishMaximumEntropyTokenizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tokenizer\ITokenizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tokenizer\MaximumEntropyTokenizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tokenizer\TokenContextGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\BeamSearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\IBeamSearchContextGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\IHeap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\ListHeap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\IPriorityQueue.cs" />
+    <Compile Include="Util\Sequence.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\Set.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\Span.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\StringTokenizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\ITypesafeMap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharpEntropy\SharpEntropy.csproj">
+      <Project>{bf0bf8b0-1894-4edf-bf51-f370b063797e}</Project>
+      <Name>SharpEntropy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WordNetApi\WordNetApi.csproj">
+      <Project>{efa439a3-159a-4715-859b-090a3165d8e5}</Project>
+      <Name>WordNetApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
