@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics", "TextAnalytics\TextAnalytics.csproj", "{B80B9D65-F067-4EC2-B001-B9D37FD3A8D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNLP", "OpenNLP\OpenNLP.csproj", "{D8251BB2-4CEF-4586-818A-AA96E3EA3683}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpEntropy", "SharpEntropy\SharpEntropy.csproj", "{BF0BF8B0-1894-4EDF-BF51-F370B063797E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordNetApi", "WordNetApi\WordNetApi.csproj", "{EFA439A3-159A-4715-859B-090A3165D8E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlugDBPediaKB", "PlugDBPediaKB\PlugDBPediaKB.csproj", "{A7DC1FB0-08F0-4F50-ADE4-4535AC86ABE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B80B9D65-F067-4EC2-B001-B9D37FD3A8D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B80B9D65-F067-4EC2-B001-B9D37FD3A8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B80B9D65-F067-4EC2-B001-B9D37FD3A8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B80B9D65-F067-4EC2-B001-B9D37FD3A8D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8251BB2-4CEF-4586-818A-AA96E3EA3683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8251BB2-4CEF-4586-818A-AA96E3EA3683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8251BB2-4CEF-4586-818A-AA96E3EA3683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8251BB2-4CEF-4586-818A-AA96E3EA3683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF0BF8B0-1894-4EDF-BF51-F370B063797E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF0BF8B0-1894-4EDF-BF51-F370B063797E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF0BF8B0-1894-4EDF-BF51-F370B063797E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF0BF8B0-1894-4EDF-BF51-F370B063797E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA439A3-159A-4715-859B-090A3165D8E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA439A3-159A-4715-859B-090A3165D8E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA439A3-159A-4715-859B-090A3165D8E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA439A3-159A-4715-859B-090A3165D8E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7DC1FB0-08F0-4F50-ADE4-4535AC86ABE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DC1FB0-08F0-4F50-ADE4-4535AC86ABE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DC1FB0-08F0-4F50-ADE4-4535AC86ABE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DC1FB0-08F0-4F50-ADE4-4535AC86ABE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
