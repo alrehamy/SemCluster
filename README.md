@@ -36,8 +36,11 @@ This module represents the famous OpenNLP library. Since long time, I couldn’t
 OpenNLP is used as follows (See SemCluster.cs in TextAnalytics project)
 
 private MaximumEntropySentenceDetector _sentenceDetector;
+
 private AbstractTokenizer _tokenizer;
+
 private EnglishMaximumEntropyPosTagger _posTagger;
+
 private EnglishTreebankChunker _chunker; 
 
 # Entropy
@@ -51,7 +54,9 @@ This module offers a C# interface for querying WordNet. It also offers capabilit
 WordNet is utilized as follows:
 
 private WordNetEngine _wn;      // WordNet engine instance
+
 private SynSet RootVirtualNode; // WordNet root node (for similarity computation)
+
 private WordNetEngine.SynSetRelation[] SynSetRelationTypes; // Semantic relations allowed to scan for LCS computation
 
 And the engine can be initialized as follows:
@@ -67,7 +72,9 @@ List<SynSet> Senses = _wn.GetSynSets(“dummy”, false, WordNetEngine.POS.Noun)
 To specify relationships:
 
 SynSetRelationTypes = new WordNetApi.Core.WordNetEngine.SynSetRelation[2];
+
 SynSetRelationTypes[0] = WordNetApi.Core.WordNetEngine.SynSetRelation.Hypernym;
+
 SynSetRelationTypes[1] = WordNetApi.Core.WordNetEngine.SynSetRelation.InstanceHypernym;
 
 # Affinity Propagation
@@ -78,6 +85,7 @@ Frey, B.J. and Dueck, D., 2007. Clustering by passing messages between data poin
 For computational efficiency reasons, it was decided that AP should be implemented in unmanaged code style, accordingly, it is written in C++ and linked to SemCluster implementation through CLI, therefore, the algorithm can be initialized in the following style (See SemCluster.cs in TextAnalytics project):
 
 AffinityPropagationClustering ap=new AffinityPropagationClustering();
+
 int[] res = ap.Run(S, d, 1, 0.9, 1000, 50);
 
 Where S is a full similarity matrix and d is its dimension. Other values can be understood by reading our papers. 
@@ -96,13 +104,21 @@ private void PlugInsManager(string DataFolder)
 Where PlugInsManager loads all the plugins in the folder PlugIns, and plugs them in SemCluster's workflow architecture in the following style:
 
 for (int i = 0; i < PlugIns.Length; i++)
+
 {
+
 Type PlugInType = Assembly.LoadFrom(DataFolder + "PlugIns\\" + PlugIns[i]).GetType(PlugIns[i].Substring(0, PlugIns[i].Length - 4) + ".Driver");
+
 if (PlugInType != null)
+
 {
+
 KBDrivers.Add(Activator.CreateInstance(PlugInType));
+
  KBDriversQueryPointers.Add(PlugInType.GetMethod("Query", KBDriverQuerySignture));
+ 
 }
+
 }
 
 Where KBDrivers is a list of various instances.
